@@ -1,0 +1,39 @@
+.index{
+    position: relative;
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    text-align: center;
+    font-size: 0.5rem;
+}
+
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+
+nav{
+    height:100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #fefefe;
+    font-size: 0.26667rem;
+}
+
+nav a{
+    display: block;
+    color: #232323;
+    text-decoration: none;   
+}
+
+nav a span{
+    display: block; 
+    margin-bottom: .125rem;
+}
+
+.icon {
+  width: 3em;
+  height: 3em;
+}
