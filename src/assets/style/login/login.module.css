@@ -1,0 +1,169 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.box {
+    background: #ffffff;
+    width: 750px;
+    height: 1624px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    height: 87.96px;
+    display: flex;
+}
+
+.go {
+    width: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 30px;
+}
+
+
+
+section {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+section .logo {
+    width: 100%;
+    height: 214px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .logo img {
+    width: 320px;
+    height: 110px;
+}
+
+section .form {
+    width: 621.96px;
+    height: 570.96px;
+    margin: 0 auto;
+}
+
+section .input {
+    height: 302px;
+}
+
+section .input p {
+    height: 62px;
+    padding-top: 30px;
+    color: #999999;
+    font-size: 24px;
+    text-align: left;
+}
+
+section .input .input_form {
+    height: 55px;
+    margin: 20px 0 0;
+    padding: 36px 0;
+    border-bottom: 2px solid #999999;
+    display: flex;
+    align-items: center;
+}
+
+section .input .input_form:nth-of-type(1) span {
+    width: 70.26px;
+    height: 36px;
+    font-size: 32px;
+    color: #ff6743;
+    padding-right: 15px;
+}
+
+section .input .input_form:nth-of-type(2) span {
+    height: 100%;
+    font-size: 32px;
+    color: #ff6743;
+    padding-left: 40px;
+}
+
+section .input .input_form input {
+    height: 36px;
+    font-size: 32px;
+    color: #232323;
+    border: none;
+    outline: medium;
+    background: transparent;
+}
+
+section .buttom {
+    height: 178.96px;
+
+}
+
+section .buttom .btn {
+    height: 99.96px;
+    background: linear-gradient(50deg, #ff9a34, #ff4d4a);
+    opacity: 0.4;
+    line-height: 99.96px;
+    margin: 90px 0 39px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 36px;
+    color: #fefefe;
+}
+
+section .buttom .btns {
+    height: 99.96px;
+    background: linear-gradient(50deg, #ff9a34, #ff4d4a);
+    opacity: 1;
+    line-height: 99.96px;
+    margin: 90px 0 39px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 36px;
+    color: #fefefe;
+}
+
+footer {
+    width: 470px;
+    height: 142px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 60px;
+    left: 140px;
+    right: 140px;
+}
+
+footer .register {
+    height: 142px;
+
+}
+
+footer .register p {
+    width: 100%;
+    border-top: 2px solid #999999;
+}
+
+footer .register p span {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: -17px;
+    margin-left: -90px;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    color: #999999;
+    text-align: center;
+    background: #fefefe;
+}
+
+footer .register .method {
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 70px;
+}

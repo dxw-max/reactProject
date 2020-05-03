@@ -6,5 +6,12 @@ module.exports = function(app){
         pathRewrite:{
             '^/jc':''
         }
+    })),
+    app.use('/api',createProxyMiddleware({
+        target:'http://127.0.0.1:8090',
+        changeOrigin:true,
+        pathRewrite:{
+            '^/api':''
+        }
     }))
 }
