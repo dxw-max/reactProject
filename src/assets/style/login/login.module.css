@@ -2,7 +2,12 @@
     margin: 0px;
     padding: 0px;
 }
-
+.icon {
+    width: 2em; height: 2em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+ }
 .box {
     background: #ffffff;
     width: 750px;
@@ -10,20 +15,17 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-}
-
-header {
-    width: 100%;
-    height: 87.96px;
-    display: flex;
+    overflow: hidden;
 }
 
 .go {
-    width: 100px;
+    width: 750px;
+    margin: 0 auto;
+    height: 87.96px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 30px;
+    padding-left: 20px;
 }
 
 
@@ -127,32 +129,21 @@ section .buttom .btns {
     color: #fefefe;
 }
 
-footer {
-    width: 470px;
+
+.register {
+    width:470px;
     height: 142px;
-    margin: 0 auto;
-    position: absolute;
-    bottom: 60px;
-    left: 140px;
-    right: 140px;
+    margin: 150px auto;
 }
 
-footer .register {
-    height: 142px;
-
-}
-
-footer .register p {
+.register p {
     width: 100%;
     border-top: 2px solid #999999;
 }
 
-footer .register p span {
+.register p span {
     display: inline-block;
-    position: absolute;
-    left: 50%;
-    top: -17px;
-    margin-left: -90px;
+   margin-top:-4px;
     width: 200px;
     height: 50px;
     line-height: 50px;
@@ -161,7 +152,7 @@ footer .register p span {
     background: #fefefe;
 }
 
-footer .register .method {
+.register .method {
     height: 70px;
     display: flex;
     justify-content: space-around;

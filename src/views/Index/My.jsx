@@ -13,7 +13,7 @@ class My extends Component {
             <div className={style.box}>
                 <div className={style.bg_img}>
                     <div className={style.set} onClick={this.outLogin.bind(this)}>
-                        <svg className="icon" aria-hidden="true" >
+                        <svg className={style.icon} aria-hidden="true" >
                             <use xlinkHref="#iconshezhi"></use>
                         </svg>
                         <span>{this.props.set}</span>
@@ -27,7 +27,7 @@ class My extends Component {
                             <span onClick={() => {
                                 this.props.history.push("/Login")
                             }}>{this.props.phoneCode}
-                                <svg className="icon" aria-hidden="true">
+                                <svg className={style.icon} aria-hidden="true">
                                     <use xlinkHref="#iconyou"></use>
                                 </svg>
                             </span>
@@ -65,7 +65,7 @@ class My extends Component {
                     <ul className={style.setting}>
                         <li>
                             <div>
-                                <svg className="icon" aria-hidden="true" >
+                                <svg className={style.icon} aria-hidden="true" >
                                     <use xlinkHref="#icondingdan"></use>
                                 </svg>
                                 <p>我的订单</p>
@@ -73,7 +73,7 @@ class My extends Component {
                         </li>
                         <li>
                             <div>
-                                <svg className="icon" aria-hidden="true" >
+                                <svg className={style.icon} aria-hidden="true" >
                                     <use xlinkHref="#iconyouhui-copy"></use>
                                 </svg>
                                 <p>我的票夹</p>
@@ -81,7 +81,7 @@ class My extends Component {
                         </li>
                         <li>
                             <div>
-                                <svg className="icon" aria-hidden="true" >
+                                <svg className={style.icon} aria-hidden="true" >
                                     <use xlinkHref="#iconkabao"></use>
                                 </svg>
                                 <p>我的卡包</p>
@@ -91,7 +91,7 @@ class My extends Component {
                     <ul className={style.setting}>
                         <li>
                             <div>
-                                <svg className="icon" aria-hidden="true" >
+                                <svg className={style.icon} aria-hidden="true" >
                                     <use xlinkHref="#iconcontacts"></use>
                                 </svg>
                                 <p>实名购票人</p>
@@ -99,7 +99,7 @@ class My extends Component {
                         </li>
                         <li>
                             <div>
-                                <svg className="icon" aria-hidden="true" >
+                                <svg className={style.icon} aria-hidden="true" >
                                     <use xlinkHref="#iconshouhuodizhi"></use>
                                 </svg>
                                 <p>收货地址</p>
@@ -107,7 +107,7 @@ class My extends Component {
                         </li>
                         <li>
                             <div>
-                                <svg className="icon" aria-hidden="true" >
+                                <svg className={style.icon} aria-hidden="true" >
                                     <use xlinkHref="#iconyijianfankui"></use>
                                 </svg>
                                 <p>意见反馈</p>
@@ -115,7 +115,7 @@ class My extends Component {
                         </li>
                         <li>
                             <div>
-                                <svg className="icon" aria-hidden="true" >
+                                <svg className={style.icon} aria-hidden="true" >
                                     <use xlinkHref="#iconkefu2"></use>
                                 </svg>
                                 <p>客服帮助</p>
@@ -136,7 +136,6 @@ class My extends Component {
     }
 }
 function mapStateToProps(state) {
-    console.log(state.my)
     return {
         set: state.my.set,
         userName: state.my.userName,

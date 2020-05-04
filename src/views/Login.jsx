@@ -17,15 +17,15 @@ class Login extends Component {
     render() {
         return (
             <div className={style.box}>
-                <header>
-                    <div className={style.go} onClick={() => {
-                        this.props.history.go(-1)
-                    }}>
-                        <svg className="icon" aria-hidden="true">
-                            <use xlinkHref="#iconicon4"></use>
-                        </svg>
-                    </div>
-                </header>
+
+                <div className={style.go} onClick={() => {
+                    this.props.history.go(-1)
+                }}>
+                    <svg className={style.icon} aria-hidden="true">
+                        <use xlinkHref="#iconicon4"></use>
+                    </svg>
+                </div>
+
                 <section>
                     <div className={style.logo}>
                         <img src={require("../assets/image/login/logo.png")} alt="" />
@@ -47,19 +47,19 @@ class Login extends Component {
                         </div>
                     </div>
                 </section>
-                <footer>
-                    <div className={style.register}>
-                        <p><span>其他登录方式</span></p>
-                        <div className={style.method}>
-                            <svg className="icon" aria-hidden="true">
-                                <use xlinkHref="#iconqq"></use>
-                            </svg>
-                            <svg className="icon" aria-hidden="true">
-                                <use xlinkHref="#iconweibo"></use>
-                            </svg>
-                        </div>
+
+                <div className={style.register}>
+                    <p><span>其他登录方式</span></p>
+                    <div className={style.method}>
+                        <svg className={style.icon} aria-hidden="true">
+                            <use xlinkHref="#iconqq"></use>
+                        </svg>
+                        <svg className={style.icon} aria-hidden="true">
+                            <use xlinkHref="#iconweibo"></use>
+                        </svg>
                     </div>
-                </footer>
+                </div>
+
             </div >
         )
     }
