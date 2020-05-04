@@ -1,0 +1,108 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* //影院首行 */
+.foter{
+    width: 100%;
+    height: 2.5rem;
+    /* background-color: aqua; */
+    text-align: center;
+    line-height: 2.5rem;
+}
+.total{
+    position: relative;
+    width: 80%;
+    height: 100%;
+    /* background-color: darkorchid; */
+    text-align: center;
+    left: 10%;
+    border-radius: 0.13333rem;
+    
+}
+/* 页面 */
+.content{
+    width: 100%;
+    height: 4.75rem;
+    /* background-color:red; */
+}
+.nameimg{
+    position: relative;
+    float: right;
+   
+    top:95px;
+    /* background-color: chartreuse; */
+}
+.img{
+    float: left;
+    width: 1rem;
+    height: 1rem;
+}
+.name{
+    position: relative;
+    padding-left: 1.5rem;
+    top: 1.0rem;
+    width: 6rem;
+    height: 2.875rem;
+    float: left;
+    left:150px;
+}
+.a{
+    font-size: 40px;
+}
+/* .href{
+    position: relative;
+    float:right;
+} */
+
+
+.conten img{
+width: 2.75rem;
+height: 2.875rem;
+}
+/* 轮播图 */
+.banner{
+    width: 100%;
+    height: 8rem;
+    /* background-color: darkgoldenrod; */
+}
+
+
+.banner .hot_list .hot_list_item{
+    width: 2.66667rem;
+    height: 3.62667rem;
+    border-radius: 0.13333rem;
+    overflow: hidden;
+    border: solid 1px #ebebeb;
+}
+
+.banner .hot_list .hot_list_item img{
+    border: none;
+    border-color: transparent;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+
+.banner .hot_list a h3{
+    line-height: 0.56rem;
+    min-height: 1.09333rem;
+    font-size: 0.37333rem;
+    color: #232323;
+    margin-top: 0.29333rem;
+    width: 90%;
+    font-weight: normal;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+}
+
+#swiper_slide_active{
+    width: 2.7rem!important;
+    margin-right: 8px!important;
+
+}
