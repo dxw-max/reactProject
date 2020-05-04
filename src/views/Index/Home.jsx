@@ -5,9 +5,18 @@ import "swiper/css/swiper.css"
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import homeActions from '../../store/actionCreator/home/index'
+import axios from 'axios'
 
 
 class Home extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            leftColumn: [],
+            rightColumn: []
+        };
+    }
+
     render() {
         return (
             <div className={style.home}>
@@ -51,8 +60,8 @@ class Home extends Component {
                     <div className={style.label_item}>
                         {
                             this.props.labelItemList.map(v => (
-                                <div key={v.id} className={style.item_block} onClick={()=>{this.props.history.push("/show")}}>
-                                    <a href="#">
+                                <div key={v.id} className={style.item_block} onClick={() => { this.props.history.push("/show") }}>
+                                    <a>
                                         <img src={v.pic} alt="" />
                                         <span>{v.name}</span>
                                     </a>
@@ -358,8 +367,195 @@ class Home extends Component {
                         </div>
                     </div>
                 </div>
+
+                <div id={style.stage}>
+                    <div className={style.stage_title}>
+                        <h3>舞台剧</h3>
+                        <a href="">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoBAMAAAB+0KVeAAAALVBMVEUAAABmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmaTgChpAAAAD3RSTlMA/Aa1qrzcwa+ezcijk5JAYXVXAAAAVUlEQVQoz2MYtoDNAIsghzA2pYEOWASZRbApNWzAIqiKTSlT4QEsouqS2JQGXsAiqpVApCDTxgeYgtoy2OyZQJyLmAqxhAirBLbwcCAy5NgaGIYzAADnxQppL/x7ngAAAABJRU5ErkJggg==" alt="" />
+                        </a>
+                    </div>
+
+                    <div className={style.stage_bg}>
+                        <div className={style.stage_info}>
+                            <a href="">
+                                <div className={style.stage_info_pic}>
+                                    <img src="https://image.juooo.com//group1/M00/04/21/rAoKNV4Jj32AC3hcAAMtvdtNV6E061.png" alt="" />
+                                </div>
+                                <div className={style.stage_info_date}>
+                                    <p>
+                                        <strong>2020.07.03</strong>
+                                        <span>周五 20:00</span>
+                                    </p>
+                                    <h3>
+                                        【演出延期】2020第七届城市戏剧节荒诞喜剧《劫出人生》-深圳站
+                                </h3>
+                                    <p className={style.stage_info_date_city}>
+                                        深圳 | 南山文体中心剧院小剧院
+                                </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div className={style.stage_list}>
+                        <div className="swiper-container swiper3">
+                            <div className="swiper-wrapper">
+                                <div className="swiper-slide" id={style.stage_list_swiper_active}>
+                                    <a href="">
+                                        <div className={style.stage_list_swiper_pic}>
+                                            <img src="https://image.juooo.com//group1/M00/03/40/rAoKmV3LdBWAImHFAACB1n-G-Nk921.jpg" alt="" />
+                                        </div>
+                                        <h3>【演出延期】2020第七届城市戏剧节 乌镇戏剧节“最佳戏剧奖”“最佳个人表现奖”团队最新作品《涂红》-深圳站</h3>
+                                        <p>
+                                            <strong>¥99</strong>
+                                            <span>起</span>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div className="swiper-slide" id={style.stage_list_swiper_active}>
+                                    <a href="">
+                                        <div className={style.stage_list_swiper_pic}>
+                                            <img src="https://image.juooo.com//group1/M00/03/40/rAoKmV3LdBWAImHFAACB1n-G-Nk921.jpg" alt="" />
+                                        </div>
+                                        <h3>【演出延期】2020第七届城市戏剧节 乌镇戏剧节“最佳戏剧奖”“最佳个人表现奖”团队最新作品《涂红》-深圳站</h3>
+                                        <p>
+                                            <strong>¥99</strong>
+                                            <span>起</span>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div className="swiper-slide" id={style.stage_list_swiper_active}>
+                                    <a href="">
+                                        <div className={style.stage_list_swiper_pic}>
+                                            <img src="https://image.juooo.com//group1/M00/03/40/rAoKmV3LdBWAImHFAACB1n-G-Nk921.jpg" alt="" />
+                                        </div>
+                                        <h3>【演出延期】2020第七届城市戏剧节 乌镇戏剧节“最佳戏剧奖”“最佳个人表现奖”团队最新作品《涂红》-深圳站</h3>
+                                        <p>
+                                            <strong>¥99</strong>
+                                            <span>起</span>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div className="swiper-slide" id={style.stage_list_swiper_active}>
+                                    <a href="">
+                                        <div className={style.stage_list_swiper_pic}>
+                                            <img src="https://image.juooo.com//group1/M00/03/40/rAoKmV3LdBWAImHFAACB1n-G-Nk921.jpg" alt="" />
+                                        </div>
+                                        <h3>【演出延期】2020第七届城市戏剧节 乌镇戏剧节“最佳戏剧奖”“最佳个人表现奖”团队最新作品《涂红》-深圳站</h3>
+                                        <p>
+                                            <strong>¥99</strong>
+                                            <span>起</span>
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id={style.recommend}>
+                    <h3>为你推荐</h3>
+                    <div className={style.show_list}>
+                        <div id="templatesWrap" className="clearfix">
+                            <div className="leftColumn" ref={(lc) => { this.leftColumn = lc }}>
+                                <ul>
+                                    {
+                                        this.state.leftColumn.map((item, index) => {
+                                            return <li key={index} className={style.show_list_item}>
+                                                <div className={style.show_list_item_pic}>
+                                                    <img src="https://image.juooo.com/group1/M00/03/25/rAoKmV2f3-yADPouAACAMESBbK8067.jpg" alt="" />
+                                                    <span>深圳</span>
+                                                </div>
+                                                <div className={style.show_list_item_info}>
+                                                    <div className={style.show_list_item_info_title}>
+                                                        <div className={style.show_list_item_info_title_sponsor}>
+                                                            <img src="https://image.juooo.com/upload/i.png" alt="" />
+                                                        </div>
+                                                        <h3>
+                                                            【演出延期】聚橙出品 |百老汇现象级原版音乐剧《来自远方》-深圳站
+                                                        </h3>
+                                                    </div>
+                                                    <p className={style.show_list_item_info_date}>
+                                                        <span>2020.06.12 - 06.14  </span>
+                                                    </p>
+                                                    <p className={style.show_list_item_info_pic}>
+                                                        <span>￥280</span><span>起</span>
+                                                    </p>
+                                                    <p className={style.show_list_item_info_bottom}>
+                                                        <span>电子票</span>
+                                                        <span>可选座</span>
+                                                        <span>限时8折起</span>
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        })
+                                    }
+                                </ul>
+                            </div>
+                            <div className="rightColumn" ref={(rc) => { this.rightColumn = rc }}>
+                                <ul>
+                                    {
+                                        this.state.rightColumn.map((item, index) => {
+                                            return <li key={index} className={style.show_list_item}>
+                                                <div className={style.show_list_item_pic}>
+                                                    <img src="https://image.juooo.com/group1/M00/03/25/rAoKmV2f3-yADPouAACAMESBbK8067.jpg" alt="" />
+                                                    <span>深圳</span>
+                                                </div>
+                                                <div className={style.show_list_item_info}>
+                                                    <div className={style.show_list_item_info_title}>
+                                                        <div className={style.show_list_item_info_title_sponsor}>
+                                                            <img src="https://image.juooo.com/upload/i.png" alt="" />
+                                                        </div>
+                                                        <h3>
+                                                            【演出延期】聚橙出品 |百老汇现象级原版音乐剧《来自远方》-深圳站
+                                                        </h3>
+                                                    </div>
+                                                    <p className={style.show_list_item_info_date}>
+                                                        <span>2020.06.12 - 06.14  </span>
+                                                    </p>
+                                                    <p className={style.show_list_item_info_pic}>
+                                                        <span>￥280</span><span>起</span>
+                                                    </p>
+                                                    <p className={style.show_list_item_info_bottom}>
+                                                        <span>电子票</span>
+                                                        <span>可选座</span>
+                                                        <span>限时8折起</span>
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        })
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div >
         )
+    }
+
+    async FallsList() {
+        const { data } = await axios.get('/jc/Show/Search/getShowList?page=1');
+        let leftArr = [];
+        let rightArr = [];
+        let that = this;
+        data.data.list.forEach(function (item, index) {
+            console.log(that.leftColumn,that.rightColumn)
+            let oHeightDiff = that.leftColumn.offsetHeight - that.rightColumn.offsetHeight;
+            if (oHeightDiff > 0) {
+                //左边高，新表格添加到右边
+                leftArr.push(item);
+            } else if (oHeightDiff <= 0) {
+                //右边高，或一样高，新表格添加到左边
+                rightArr.push(item);
+            }
+        });
+        this.setState({
+            leftColumn: leftArr,
+            rightColumn: rightArr
+        });
+        console.log(this.state)
     }
 
     componentDidMount() {
@@ -383,12 +579,19 @@ class Home extends Component {
             slidesPerView: 3,
             spaceBetween: 0
         })
+        new Swiper('.swiper3', {
+            slidesPerView: 3,
+            spaceBetween: 0
+        })
         this.props.homeActions.getLabelItem();
+        this.props.homeActions.setFalls();
+        this.FallsList();
     }
 }
 function mapStateToProps(state) {
     return {
-        labelItemList: state.home
+        labelItemList: state.home.labelItemList,
+        fallList: state.home.fallList
     }
 }
 function mapDispatchToProps(dispatch) {
