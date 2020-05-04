@@ -21,7 +21,7 @@ class Login extends Component {
                     <div className={style.go} onClick={() => {
                         this.props.history.go(-1)
                     }}>
-                        <svg className="icon" aria-hidden="true">
+                        <svg className={style.icon} aria-hidden="true">
                             <use xlinkHref="#iconicon4"></use>
                         </svg>
                     </div>
@@ -51,10 +51,10 @@ class Login extends Component {
                     <div className={style.register}>
                         <p><span>其他登录方式</span></p>
                         <div className={style.method}>
-                            <svg className="icon" aria-hidden="true">
+                            <svg className={style.icon} aria-hidden="true">
                                 <use xlinkHref="#iconqq"></use>
                             </svg>
-                            <svg className="icon" aria-hidden="true">
+                            <svg className={style.icon} aria-hidden="true">
                                 <use xlinkHref="#iconweibo"></use>
                             </svg>
                         </div>

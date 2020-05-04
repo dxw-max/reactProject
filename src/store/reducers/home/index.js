@@ -5,6 +5,6 @@ export default function(state = homeInit.labelItemList,{type,payload}){
     if(type === homeType.CHANGE_LABEL_ITEM){
         state = payload;
     }
-    console.log(state);
+    //console.log(state);
     return state;
 }

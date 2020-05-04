@@ -1,0 +1,35 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 750px;
+    height: 1624px;
+    margin: 0 auto;
+}
+
+.icon {
+    width: 2em;
+    height: 2em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.box {
+    width: 750px;
+    background: #eeeeee;
+    margin: 0 auto;
+    height: 1624px;
+}
+header {
+    width: 100%;
+    height: 87.96px;
+    background: fuchsia;
+}
+.go{
+    width: 100%;
+    height: 87.96px;
+    background: fuchsia;
+}

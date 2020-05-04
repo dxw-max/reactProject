@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import homeActions from '../../store/actionCreator/home/index'
 
+
 class Home extends Component {
     render() {
         return (
@@ -50,7 +51,7 @@ class Home extends Component {
                     <div className={style.label_item}>
                         {
                             this.props.labelItemList.map(v => (
-                                <div key={v.id} className={style.item_block}>
+                                <div key={v.id} className={style.item_block} onClick={()=>{this.props.history.push("/show")}}>
                                     <a href="#">
                                         <img src={v.pic} alt="" />
                                         <span>{v.name}</span>
