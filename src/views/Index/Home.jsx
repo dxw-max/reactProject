@@ -541,7 +541,7 @@ class Home extends Component {
         let rightArr = [];
         let that = this;
         data.data.list.forEach(function (item, index) {
-            console.log(that.leftColumn,that.rightColumn)
+            console.log(that.leftColumn, that.rightColumn)
             let oHeightDiff = that.leftColumn.offsetHeight - that.rightColumn.offsetHeight;
             if (oHeightDiff > 0) {
                 //左边高，新表格添加到右边
@@ -551,10 +551,10 @@ class Home extends Component {
                 rightArr.push(item);
             }
         });
-        this.setState({
-            leftColumn: leftArr,
-            rightColumn: rightArr
-        });
+        this.setState(prevState => ({
+            leftColumn: prevState.leftColumn.concat(leftArr),
+            rightColumn: prevState.rightColumn.concat(rightArr)
+        }));
         console.log(this.state)
     }
 
