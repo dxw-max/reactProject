@@ -1,5 +1,4 @@
 import myType from "../../actionType/my"
-import axios from "axios";
 
 export function changeUser(payload) {
     return {

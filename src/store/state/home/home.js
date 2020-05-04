@@ -1,3 +1,4 @@
 export default {
-    labelItemList:[]
+    labelItemList:[],
+    fallList:[]
 }

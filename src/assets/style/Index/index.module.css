@@ -6,6 +6,7 @@
 }
 
 footer{
+    height: 1.35rem;
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -25,7 +26,8 @@ nav{
 nav a{
     display: block;
     color: #232323;
-    text-decoration: none;   
+    text-decoration: none;
+    padding-top: 0.1rem;  
 }
 
 nav a span{

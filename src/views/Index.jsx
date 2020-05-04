@@ -16,7 +16,7 @@ export default class Index extends Component {
             <div className={style.index}>
                 <footer className={style.footer}>
                     <nav className={style.nav}>
-                        <NavLink to={'/'}>
+                        <NavLink to={'/'} exact>
                             <svg className={style.icon} aria-hidden={true}>
                                 <use xlinkHref="#iconshouye"></use>
                             </svg>
@@ -34,7 +34,7 @@ export default class Index extends Component {
                             </svg>
                             <span>票夹</span>
                         </NavLink>
-                        <NavLink to={'/my'}>
+                        <NavLink to={'/My'}>
                             <svg className={style.icon} aria-hidden={true}>
                                 <use xlinkHref="#iconwode"></use>
                             </svg>

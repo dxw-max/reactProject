@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {
     Route,
@@ -9,11 +8,13 @@ import {
 import Login from './views/Login'
 import Search from './views/search'
 import Index from './views/Index'
+import Show from "./views/show"
 
 function App() {
     return (
         <div className="App">
             <Switch>
+                <Route path={'/show'} component={Show}></Route>
                 <Route path={'/login'} component={Login}></Route>
                 <Route path={'/search'} component={Search}></Route>
                 <Route path={'/'} component={Index}></Route>
