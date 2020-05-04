@@ -136,7 +136,6 @@ class My extends Component {
     }
 }
 function mapStateToProps(state) {
-    console.log(state.my)
     return {
         set: state.my.set,
         userName: state.my.userName,

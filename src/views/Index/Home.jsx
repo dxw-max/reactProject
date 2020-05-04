@@ -52,7 +52,7 @@ class Home extends Component {
                         {
                             this.props.labelItemList.map(v => (
                                 <div key={v.id} className={style.item_block} onClick={()=>{this.props.history.push("/show")}}>
-                                    <a href="#">
+                                    <a>
                                         <img src={v.pic} alt="" />
                                         <span>{v.name}</span>
                                     </a>
