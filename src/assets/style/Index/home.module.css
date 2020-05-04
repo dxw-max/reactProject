@@ -14,7 +14,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background: #fff;
+    background: #fff!important;
     z-index: 100;
 }
 
@@ -101,7 +101,7 @@ section .label_item{
 section .label_item .item_block{
     height: 64px;
     width: 20%;
-    margin-bottom: 0.29333rem;
+    margin-bottom: 1.2rem;
 }
 
 section .label_item .item_block a{
