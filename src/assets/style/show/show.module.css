@@ -25,6 +25,7 @@ body {
     width: 100%;
     height: 87.96px;
     border-bottom: 2px solid #ebebeb;
+
 }
 .header span{
     width: 100px;
@@ -49,7 +50,6 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    
 }
 
 .nav .showType{
@@ -86,24 +86,20 @@ body {
 
 
 #recommend{
-
+    
 }
 
-#recommend>h3{
-    padding: 0.26667rem 0.4rem 0.13333rem;
-    font-weight: 700;
-    font-size: 0.48rem;
-    line-height: 0.61333rem;
-    height: 0.61333rem;
-    color: #232323;
-    text-align: left;
-}
 
 #recommend .show_list{
     width: 100%;
     padding: 0 0.4rem;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+#recommend .show_list #templatesWrap{
+    display: flex;
+    justify-content: space-between;
 }
 
 #recommend .show_list .show_list_item{
@@ -169,13 +165,13 @@ body {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    text-indent: 0.7rem;
+    text-indent: 0.9rem;
 }
 
 #recommend .show_list .show_list_item_info .show_list_item_info_title .show_list_item_info_title_sponsor{
     position: absolute;
     left: 0;
-    top: -0.07rem;
+    top: -0.08rem;
     display: block;
     width: 0.89333rem;
     height: 0.45333rem;

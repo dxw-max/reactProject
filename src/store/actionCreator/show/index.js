@@ -27,7 +27,7 @@ export default{
         return async(dispatch)=>{
             const {data} = await axios.get("/jc/Show/Search/getShowList");
             dispatch(changeShow(data.data.list))
-            console.log(data.data.list)
+            //console.log(data.data.list)
         }
     }
 }
