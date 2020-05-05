@@ -33,20 +33,28 @@ class show extends Component {
                 <div className={style.nav}>
                     <div className="swiper-container swiper_show">
                         <div className="swiper-wrapper">
-                            <div className={style.showType}>
-
+                           <ul className={style.showType}>
                                 {
-
                                     this.props.showTypeList.map(v => (
-                                        <ul className={style.showType_ul} key={v.id}>
-                                            <li className={style.showType_li}>{v.name}</li>
-                                        </ul>
+                                     
+                                        <li key={v.id}>
+                                            <span>{v.name}</span>
+                                        </li>
+                                   
                                     ))
                                 }
-                            </div>
+                           </ul>
+
+                               
+                          
                         </div>
                     </div>
-                    <div className={style.city_wrap}></div>
+                    <div className={style.city_wrap}>
+                        <p>全国</p>
+                        <svg className={style.icon} aria-hidden="true" >
+                            <use xlinkHref="#iconshouhuodizhi"></use>
+                        </svg>
+                    </div>
                 </div>
 
                 <div id={style.recommend}>

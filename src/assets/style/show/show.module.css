@@ -3,7 +3,7 @@
     padding: 0px;
 }
 body {
-    width: 750px;
+  
     height: 1624px;
     margin: 0 auto;
 }
@@ -17,15 +17,17 @@ body {
 }
 
 .box {
-    width: 750px;
+  
     margin: 0 auto;
     height: 1624px;
 }
 .header{
-    width: 100%;
+    width: 750px;
     height: 87.96px;
     border-bottom: 2px solid #ebebeb;
-
+    position: fixed;
+    z-index: 100;
+    background: #ffffff;
 }
 .header span{
     width: 100px;
@@ -45,48 +47,50 @@ body {
 }
 
 .nav{
-    width: 100%;
-    height: 90px;
+    background: #ffffff;
+    width: 750px;
+    height: 100px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    position: fixed;
+    top: 68px;
+    z-index: 100;
 }
-
 .nav .showType{
-   width: 600px;
    height: 50px;
    display: flex;
    flex-direction: row;
-   justify-content: flex-start;
-    margin-left: 0px;
+   
 }
-
-.nav .showType_ul{
-    width: 100px!important;
-    background: red;
+.nav .showType li{
+    padding: 0 5px;
 }
-.nav .showType_ul .showType_li{
-    width: 100px;
+.nav .showType li span{
     overflow: hidden;
     height: 50px;
     line-height: 50px;
-    padding: 0 10px;
-    /* margin-right: 30px;
-   padding: 0 20px; */
+
 }
 .nav .city_wrap{
-    /* position: absolute;
+    position: absolute;
     right: 0;
-    z-index: 100; */
+    z-index: 100;
     width: 152px;
     height: 50px;
-    background: gold;
+    background: #ffffff;
+    overflow: hidden;
     border-left: 2px solid #ebebeb;
 }
-
-
+.nav .city_wrap p{
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    padding-left: 30px;
+}
 #recommend{
-    
+
 }
 
 
