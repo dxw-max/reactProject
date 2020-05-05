@@ -457,7 +457,7 @@ class Home extends Component {
                 <div id={style.recommend}>
                     <h3>为你推荐</h3>
                     <div className={style.show_list}>
-                        <div id={style.templatesWrap} className="clearfix">
+                        <div id={style.templatesWrap} className="clearfix" ref={(e)=>{this.falls = e}}>
                             <div className="leftColumn">
                                 <ul ref={(e) => { this.leftColumn = e }}>
                                     {
@@ -554,19 +554,20 @@ class Home extends Component {
                 rightColumn: rightArr
             })
         });
+        that.setState({
+            leftColumn: [
+                ...that.state.leftColumn,
+                ...leftArr
+            ],
+            rightColumn: [
+                ...that.state.rightColumn,
+                ...rightArr
+            ]
+        });
     }
 
-    // PullOn(leftArr,rightArr){
-    //     this.setState({
-    //         leftColumn: [
-    //             ...this.state.leftColumn,
-    //             ...leftArr
-    //         ],
-    //         rightColumn: [
-    //             ...this.state.rightColumn,
-    //             ...rightArr
-    //         ]
-    //     });
+    // PullOn(){
+        
     // }
 
     componentDidMount() {
@@ -597,6 +598,7 @@ class Home extends Component {
         this.props.homeActions.getLabelItem();
         this.props.homeActions.setFalls();
         this.FallsList();
+        console.log(this.falls.offsetHeight)
     }
 }
 function mapStateToProps(state) {
