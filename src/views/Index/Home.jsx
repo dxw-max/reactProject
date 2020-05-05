@@ -19,7 +19,7 @@ class Home extends Component {
 
     render() {
         return (
-            <div className={style.home}>
+            <div className={style.home} ref={(e) => { this.home = e }}>
                 <header>
                     <div>
                         <svg className={style.icon} aria-hidden={true}>
@@ -457,7 +457,7 @@ class Home extends Component {
                 <div id={style.recommend}>
                     <h3>为你推荐</h3>
                     <div className={style.show_list}>
-                        <div id={style.templatesWrap} className="clearfix" ref={(e)=>{this.falls = e}}>
+                        <div id={style.templatesWrap} className="clearfix">
                             <div className="leftColumn">
                                 <ul ref={(e) => { this.leftColumn = e }}>
                                     {
@@ -554,21 +554,7 @@ class Home extends Component {
                 rightColumn: rightArr
             })
         });
-        that.setState({
-            leftColumn: [
-                ...that.state.leftColumn,
-                ...leftArr
-            ],
-            rightColumn: [
-                ...that.state.rightColumn,
-                ...rightArr
-            ]
-        });
     }
-
-    // PullOn(){
-        
-    // }
 
     componentDidMount() {
         new Swiper('.swiper', {
@@ -598,7 +584,20 @@ class Home extends Component {
         this.props.homeActions.getLabelItem();
         this.props.homeActions.setFalls();
         this.FallsList();
-        console.log(this.falls.offsetHeight)
+        const that = this;
+        let page = 1;
+        let clearTime = null;
+        // window.onscroll = function () {
+        //     const minHeight = that.home.offsetHeight - document.documentElement.scrollTop
+        //     if (minHeight < 600) {
+        //         clearTimeout(clearTime)
+        //         console.log(minHeight)
+        //         page += 1;
+        //         clearTime = setTimeout(() => {
+        //             that.FallsList(page);
+        //         },500)
+        //     }
+        // }
     }
 }
 function mapStateToProps(state) {
