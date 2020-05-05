@@ -83,3 +83,149 @@ body {
     background: gold;
     border-left: 2px solid #ebebeb;
 }
+
+
+#recommend{
+
+}
+
+#recommend>h3{
+    padding: 0.26667rem 0.4rem 0.13333rem;
+    font-weight: 700;
+    font-size: 0.48rem;
+    line-height: 0.61333rem;
+    height: 0.61333rem;
+    color: #232323;
+    text-align: left;
+}
+
+#recommend .show_list{
+    width: 100%;
+    padding: 0 0.4rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#recommend .show_list .show_list_item{
+    margin-top: 0.2rem;
+    width: 4.52rem;
+    border-radius: 0.16rem;
+    overflow: hidden;
+    background-color: #fefefe;
+    border: 1px solid #ebebeb;
+}
+
+#recommend .show_list .show_list_item_pic{
+    position: relative;
+    width: 100%;
+    height: 6.17333rem;
+}
+
+#recommend .show_list .show_list_item_pic img{
+    border: none;
+    border-color: transparent;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+
+#recommend .show_list .show_list_item_pic span{
+    position: absolute;
+    right: 0.2rem;
+    top: 0.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 0.48rem;
+    padding: 0 0.12rem;
+    background: linear-gradient(-45deg, rgba(38,38,38,0.8), rgba(70,68,65,0.8));
+    border-radius: 0.02667rem;
+    color: #FEFEFE;
+    font-size: 0.32rem;
+}
+
+#recommend .show_list .show_list_item_info{
+    padding: 0.21333rem 0.29333rem 0.29333rem;
+}
+
+#recommend .show_list .show_list_item_info .show_list_item_info_title{
+    position: relative;
+}
+
+#recommend .show_list .show_list_item_info .show_list_item_info_title h3{
+    color: #232323;
+    font-weight: normal;
+    font-size: 0.37333rem;
+    line-height: 0.53333rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-indent: 0.7rem;
+}
+
+#recommend .show_list .show_list_item_info .show_list_item_info_title .show_list_item_info_title_sponsor{
+    position: absolute;
+    left: 0;
+    top: -0.07rem;
+    display: block;
+    width: 0.89333rem;
+    height: 0.45333rem;
+}
+
+#recommend .show_list .show_list_item_info .show_list_item_info_title .show_list_item_info_title_sponsor img{
+    border: none;
+    border-color: transparent;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+
+#recommend .show_list .show_list_item_info .show_list_item_info_date{
+    margin-top: 0.10667rem;
+    font-size: 0.34667rem;
+    color: #666;
+    line-height: 0.53333rem;
+    text-align: left;
+}
+
+#recommend .show_list .show_list_item_info .show_list_item_info_pic{
+    margin-top: 0.10667rem;
+    text-align: left;
+}
+
+#recommend .show_list .show_list_item_info .show_list_item_info_pic span:first-child{
+    color: #FF6743;
+    font-size: 0.42667rem;
+    margin-right: 0.1rem;
+}
+
+#recommend .show_list .show_list_item_info .show_list_item_info_pic span:last-child{
+    color: #999;
+    font-size: 0.29333rem;
+}
+
+#recommend .show_list .show_list_item_info .show_list_item_info_bottom{
+    overflow: hidden;
+    margin-top: 0.13333rem;
+    text-align: left;
+}
+
+#recommend .show_list .show_list_item_info .show_list_item_info_bottom span{
+    display: inline-block;
+    padding: 1px 0.13333rem;
+    background-color: #fff1ef;
+    border-radius: 0.22667rem;
+    color: #FF6743;
+    font-size: 0.29333rem;
+    margin-right: 0.13333rem;
+    margin-bottom: 0.13333rem;
+}
