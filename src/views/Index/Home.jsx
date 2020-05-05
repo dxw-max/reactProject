@@ -25,7 +25,7 @@ class Home extends Component {
                         <svg className={style.icon} aria-hidden={true}>
                             <use xlinkHref="#icondingwei"></use>
                         </svg>
-                        <span>全国</span> 
+                        <span>全国</span>
                     </div>
                     <div>
                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAXVBMVEUAAACzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7MU5mdkAAAAHnRSTlMA+fES5d1bGgytwpCJIDy9p6Z+eWMpCKRv1sjGlU+Yw8sxAAAA/0lEQVQ4y+2TWXKDMBBENVrAYjHGGPD67n/MVEhiKiORcv7dX6Lr0UMLybz1D+2KQxAI8eT+wqbB8iPb7Da58QLgq9iFZbHf4Pb2M2dc1u3RgjzyeRa68vnoIkguc7rA/MtpwGcqDdApq4d7ui8WW2rPI9ozBTRG6wyD9g4wJqATKu0FvEl1Q7S1vqvm6N4QM2ANbQJ2GXAGXTsQMmCVfmOENt1c4aq9ExzNK6azWF1wCrkxDcS0c5+5BB4a/QNtmTu3Av1unVsDtcnpIeDP7iv/FAAo8nfBA3I71HMlgK03SXcXnupLU2ySphyWMLke2+9TKmZTrl27FhLNWy/oA9CZFFU7WU6aAAAAAElFTkSuQmCC" alt="" />
@@ -457,15 +457,15 @@ class Home extends Component {
                 <div id={style.recommend}>
                     <h3>为你推荐</h3>
                     <div className={style.show_list}>
-                        <div id="templatesWrap" className="clearfix">
-                            <div className="leftColumn" ref={(lc) => { this.leftColumn = lc }}>
-                                <ul>
+                        <div id={style.templatesWrap} className="clearfix">
+                            <div className="leftColumn">
+                                <ul ref={(e) => { this.leftColumn = e }}>
                                     {
                                         this.state.leftColumn.map((item, index) => {
                                             return <li key={index} className={style.show_list_item}>
                                                 <div className={style.show_list_item_pic}>
-                                                    <img src="https://image.juooo.com/group1/M00/03/25/rAoKmV2f3-yADPouAACAMESBbK8067.jpg" alt="" />
-                                                    <span>深圳</span>
+                                                    <img src={item.pic} alt="" />
+                                                    <span>{item.city_name}</span>
                                                 </div>
                                                 <div className={style.show_list_item_info}>
                                                     <div className={style.show_list_item_info_title}>
@@ -473,19 +473,19 @@ class Home extends Component {
                                                             <img src="https://image.juooo.com/upload/i.png" alt="" />
                                                         </div>
                                                         <h3>
-                                                            【演出延期】聚橙出品 |百老汇现象级原版音乐剧《来自远方》-深圳站
+                                                            {item.name}
                                                         </h3>
                                                     </div>
                                                     <p className={style.show_list_item_info_date}>
-                                                        <span>2020.06.12 - 06.14  </span>
+                                                        <span>{item.end_show_time}</span>
                                                     </p>
                                                     <p className={style.show_list_item_info_pic}>
-                                                        <span>￥280</span><span>起</span>
+                                                        <span>￥{item.min_price}</span><span>起</span>
                                                     </p>
                                                     <p className={style.show_list_item_info_bottom}>
-                                                        <span>电子票</span>
-                                                        <span>可选座</span>
-                                                        <span>限时8折起</span>
+                                                        <span>{item.support_desc[0]}</span>
+                                                        <span>{item.support_desc[1]}</span>
+                                                        <span>{item.support_desc[2]}</span>
                                                     </p>
                                                 </div>
                                             </li>
@@ -493,14 +493,14 @@ class Home extends Component {
                                     }
                                 </ul>
                             </div>
-                            <div className="rightColumn" ref={(rc) => { this.rightColumn = rc }}>
-                                <ul>
+                            <div className="rightColumn">
+                                <ul ref={(e) => { this.rightColumn = e }}>
                                     {
                                         this.state.rightColumn.map((item, index) => {
                                             return <li key={index} className={style.show_list_item}>
                                                 <div className={style.show_list_item_pic}>
-                                                    <img src="https://image.juooo.com/group1/M00/03/25/rAoKmV2f3-yADPouAACAMESBbK8067.jpg" alt="" />
-                                                    <span>深圳</span>
+                                                    <img src={item.pic} alt="" />
+                                                    <span>{item.city_name}</span>
                                                 </div>
                                                 <div className={style.show_list_item_info}>
                                                     <div className={style.show_list_item_info_title}>
@@ -508,19 +508,19 @@ class Home extends Component {
                                                             <img src="https://image.juooo.com/upload/i.png" alt="" />
                                                         </div>
                                                         <h3>
-                                                            【演出延期】聚橙出品 |百老汇现象级原版音乐剧《来自远方》-深圳站
+                                                            {item.name}
                                                         </h3>
                                                     </div>
                                                     <p className={style.show_list_item_info_date}>
-                                                        <span>2020.06.12 - 06.14  </span>
+                                                        <span>{item.end_show_time}</span>
                                                     </p>
                                                     <p className={style.show_list_item_info_pic}>
-                                                        <span>￥280</span><span>起</span>
+                                                        <span>￥{item.min_price}</span><span>起</span>
                                                     </p>
                                                     <p className={style.show_list_item_info_bottom}>
-                                                        <span>电子票</span>
-                                                        <span>可选座</span>
-                                                        <span>限时8折起</span>
+                                                        <span>{item.support_desc[0]}</span>
+                                                        <span>{item.support_desc[1]}</span>
+                                                        <span>{item.support_desc[2]}</span>
                                                     </p>
                                                 </div>
                                             </li>
@@ -535,28 +535,39 @@ class Home extends Component {
         )
     }
 
-    async FallsList() {
-        const { data } = await axios.get('/jc/Show/Search/getShowList?page=1');
+    async FallsList(page = 1) {
+        const { data } = await axios.get('/jc/Show/Search/getShowList?page=' + page);
         let leftArr = [];
         let rightArr = [];
         let that = this;
         data.data.list.forEach(function (item, index) {
-            console.log(that.leftColumn, that.rightColumn)
             let oHeightDiff = that.leftColumn.offsetHeight - that.rightColumn.offsetHeight;
             if (oHeightDiff > 0) {
                 //左边高，新表格添加到右边
-                leftArr.push(item);
+                rightArr.push(item);
             } else if (oHeightDiff <= 0) {
                 //右边高，或一样高，新表格添加到左边
-                rightArr.push(item);
+                leftArr.push(item);
             }
+            that.setState({
+                leftColumn: leftArr,
+                rightColumn: rightArr
+            })
         });
-        this.setState(prevState => ({
-            leftColumn: prevState.leftColumn.concat(leftArr),
-            rightColumn: prevState.rightColumn.concat(rightArr)
-        }));
-        console.log(this.state)
     }
+
+    // PullOn(leftArr,rightArr){
+    //     this.setState({
+    //         leftColumn: [
+    //             ...this.state.leftColumn,
+    //             ...leftArr
+    //         ],
+    //         rightColumn: [
+    //             ...this.state.rightColumn,
+    //             ...rightArr
+    //         ]
+    //     });
+    // }
 
     componentDidMount() {
         new Swiper('.swiper', {

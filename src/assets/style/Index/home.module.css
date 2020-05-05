@@ -1,7 +1,7 @@
 .home{
     width: 100%;
     position: relative;
-    margin-bottom: 1000px;
+    margin-bottom: 1.5rem;
 }
 
 header{
@@ -674,6 +674,11 @@ section .vip_adv a img{
     box-sizing: border-box;
 }
 
+#recommend .show_list #templatesWrap{
+    display: flex;
+    justify-content: space-between;
+}
+
 #recommend .show_list .show_list_item{
     margin-top: 0.2rem;
     width: 4.52rem;
@@ -737,13 +742,13 @@ section .vip_adv a img{
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    text-indent: 0.7rem;
+    text-indent: 0.9rem;
 }
 
 #recommend .show_list .show_list_item_info .show_list_item_info_title .show_list_item_info_title_sponsor{
     position: absolute;
     left: 0;
-    top: -0.07rem;
+    top: -0.08rem;
     display: block;
     width: 0.89333rem;
     height: 0.45333rem;
