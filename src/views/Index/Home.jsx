@@ -40,18 +40,13 @@ class Home extends Component {
 
                 <div id={style.banner} className="swiper-container swiper">
                     <div className="swiper-wrapper">
-                        <div className="swiper-slide">
-                            <img src="https://image.juooo.com/group1/M00/03/95/rAoKmV6Ods6AIHoPAAFqMr3vOqU261.jpg" alt="" />
-                        </div>
-                        <div className="swiper-slide">
-                            <img src="https://image.juooo.com/group1/M00/04/3F/rAoKNV6G8wWAbQo9AAFKecTbTmI168.jpg" alt="" />
-                        </div>
-                        <div className="swiper-slide">
-                            <img src="https://image.juooo.com/group1/M00/03/6D/rAoKmV4B3CmARboCAACCt7TZJ7k095.png" alt="" />
-                        </div>
-                        <div className="swiper-slide">
-                            <img src="https://image.juooo.com/group1/M00/03/6D/rAoKmV4B3DeAAheBAAE8k0yWnNo649.png" alt="" />
-                        </div>
+                        {
+                            this.props.homeBannerList.map((v, i) => (
+                                <div key={i} className="swiper-slide">
+                                    <img src={v.image_url} alt="" title={v.title} />
+                                </div>
+                            ))
+                        }
                     </div>
                     <div className="swiper-pagination" id={'swiper'}></div>
                 </div>
@@ -86,132 +81,31 @@ class Home extends Component {
                         <div className={style.vip_swiper}>
                             <div id={style.swiper_container} className="swiper-container swiper1">
                                 <div className="swiper-wrapper">
-                                    <div className="swiper-slide">
-                                        <div className={style.swiper_list}>
-                                            <div className={style.swiper_list_item}>
-                                                <a href="">
-                                                    <img src="https://image.juooo.com/group1/M00/03/38/rAoKmV2_wuuAQ3PKAAC-dYecJHk485.jpg" alt="" />
-                                                </a>
+                                    {
+                                        this.props.vipHomeSchedular.map((v) => (
+                                            <div key={v.schedular_id} className="swiper-slide">
+                                                <div className={style.swiper_list}>
+                                                    <div className={style.swiper_list_item}>
+                                                        <a href="">
+                                                            <img src={v.pic} alt="" />
+                                                        </a>
+                                                    </div>
+                                                    <div className={style.swiper_list_info}>
+                                                        <a href="">
+                                                            <h3>{v.schedular_name}</h3>
+                                                            <p>
+                                                                <span>{v.min_discount}</span>
+                                                                <span>折起</span>
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                    <a href="">
+                                                        <span className={style.swiper_list_buy}>立即抢购</span>
+                                                    </a>
+                                                </div>
                                             </div>
-                                            <div className={style.swiper_list_info}>
-                                                <a href="">
-                                                    <h3>【小橙堡】经典亲子童话剧《胡桃夹子》-固安站</h3>
-                                                    <p>
-                                                        <span>5</span>
-                                                        <span>折起</span>
-                                                    </p>
-                                                </a>
-                                            </div>
-                                            <a href="">
-                                                <span className={style.swiper_list_buy}>立即抢购</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <div className={style.swiper_list}>
-                                            <div className={style.swiper_list_item}>
-                                                <a href="">
-                                                    <img src="https://image.juooo.com/group1/M00/03/38/rAoKmV2_wuuAQ3PKAAC-dYecJHk485.jpg" alt="" />
-                                                </a>
-                                            </div>
-                                            <div className={style.swiper_list_info}>
-                                                <a href="">
-                                                    <h3>【小橙堡】经典亲子童话剧《胡桃夹子》-固安站</h3>
-                                                    <p>
-                                                        <span>5</span>
-                                                        <span>折起</span>
-                                                    </p>
-                                                </a>
-                                            </div>
-                                            <a href="">
-                                                <span className={style.swiper_list_buy}>立即抢购</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <div className={style.swiper_list}>
-                                            <div className={style.swiper_list_item}>
-                                                <a href="">
-                                                    <img src="https://image.juooo.com/group1/M00/03/38/rAoKmV2_wuuAQ3PKAAC-dYecJHk485.jpg" alt="" />
-                                                </a>
-                                            </div>
-                                            <div className={style.swiper_list_info}>
-                                                <a href="">
-                                                    <h3>【小橙堡】经典亲子童话剧《胡桃夹子》-固安站</h3>
-                                                    <p>
-                                                        <span>5</span>
-                                                        <span>折起</span>
-                                                    </p>
-                                                </a>
-                                            </div>
-                                            <a href="">
-                                                <span className={style.swiper_list_buy}>立即抢购</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <div className={style.swiper_list}>
-                                            <div className={style.swiper_list_item}>
-                                                <a href="">
-                                                    <img src="https://image.juooo.com/group1/M00/03/38/rAoKmV2_wuuAQ3PKAAC-dYecJHk485.jpg" alt="" />
-                                                </a>
-                                            </div>
-                                            <div className={style.swiper_list_info}>
-                                                <a href="">
-                                                    <h3>【小橙堡】经典亲子童话剧《胡桃夹子》-固安站</h3>
-                                                    <p>
-                                                        <span>5</span>
-                                                        <span>折起</span>
-                                                    </p>
-                                                </a>
-                                            </div>
-                                            <a href="">
-                                                <span className={style.swiper_list_buy}>立即抢购</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <div className={style.swiper_list}>
-                                            <div className={style.swiper_list_item}>
-                                                <a href="">
-                                                    <img src="https://image.juooo.com/group1/M00/03/38/rAoKmV2_wuuAQ3PKAAC-dYecJHk485.jpg" alt="" />
-                                                </a>
-                                            </div>
-                                            <div className={style.swiper_list_info}>
-                                                <a href="">
-                                                    <h3>【小橙堡】经典亲子童话剧《胡桃夹子》-固安站</h3>
-                                                    <p>
-                                                        <span>5</span>
-                                                        <span>折起</span>
-                                                    </p>
-                                                </a>
-                                            </div>
-                                            <a href="">
-                                                <span className={style.swiper_list_buy}>立即抢购</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <div className={style.swiper_list}>
-                                            <div className={style.swiper_list_item}>
-                                                <a href="">
-                                                    <img src="https://image.juooo.com/group1/M00/03/38/rAoKmV2_wuuAQ3PKAAC-dYecJHk485.jpg" alt="" />
-                                                </a>
-                                            </div>
-                                            <div className={style.swiper_list_info}>
-                                                <a href="">
-                                                    <h3>【小橙堡】经典亲子童话剧《胡桃夹子》-固安站</h3>
-                                                    <p>
-                                                        <span>5</span>
-                                                        <span>折起</span>
-                                                    </p>
-                                                </a>
-                                            </div>
-                                            <a href="">
-                                                <span className={style.swiper_list_buy}>立即抢购</span>
-                                            </a>
-                                        </div>
-                                    </div>
+                                        ))
+                                    }
                                 </div>
                                 <div className="swiper-pagination" id={'swiper1'}></div>
                             </div>
@@ -239,78 +133,18 @@ class Home extends Component {
                             <div className={style.hot_list}>
                                 <div className="swiper-container swiper2">
                                     <div className="swiper-wrapper">
-                                        <div className="swiper-slide" id={style.swiper_slide_active}>
-                                            <a href="">
-                                                <div className={style.hot_list_item}>
-                                                    <img src="https://image.juooo.com//group1/M00/03/6C/rAoKmV4AZ3GAK-xpAABsQm0qZyQ219.jpg" alt="" />
+                                        {
+                                            this.props.hostShowList.map((v, i) => (
+                                                <div key={i} className="swiper-slide" id={style.swiper_slide_active}>
+                                                    <a href="">
+                                                        <div className={style.hot_list_item}>
+                                                            <img src={v.pic} alt="" />
+                                                        </div>
+                                                        <h3>{v.show_name}</h3>
+                                                    </a>
                                                 </div>
-                                                <h3>2020第七届城市戏剧节 《涂红》-石家庄站</h3>
-                                            </a>
-                                        </div>
-                                        <div className="swiper-slide" id={style.swiper_slide_active}>
-                                            <a href="">
-                                                <div className={style.hot_list_item}>
-                                                    <img src="https://image.juooo.com//group1/M00/03/6C/rAoKmV4AZ3GAK-xpAABsQm0qZyQ219.jpg" alt="" />
-                                                </div>
-                                                <h3>2020第七届城市戏剧节 《涂红》-石家庄站</h3>
-                                            </a>
-                                        </div>
-                                        <div className="swiper-slide" id={style.swiper_slide_active}>
-                                            <a href="">
-                                                <div className={style.hot_list_item}>
-                                                    <img src="https://image.juooo.com//group1/M00/03/6C/rAoKmV4AZ3GAK-xpAABsQm0qZyQ219.jpg" alt="" />
-                                                </div>
-                                                <h3>2020第七届城市戏剧节 《涂红》-石家庄站</h3>
-                                            </a>
-                                        </div>
-                                        <div className="swiper-slide" id={style.swiper_slide_active}>
-                                            <a href="">
-                                                <div className={style.hot_list_item}>
-                                                    <img src="https://image.juooo.com//group1/M00/03/6C/rAoKmV4AZ3GAK-xpAABsQm0qZyQ219.jpg" alt="" />
-                                                </div>
-                                                <h3>2020第七届城市戏剧节 《涂红》-石家庄站</h3>
-                                            </a>
-                                        </div>
-                                        <div className="swiper-slide" id={style.swiper_slide_active}>
-                                            <a href="">
-                                                <div className={style.hot_list_item}>
-                                                    <img src="https://image.juooo.com//group1/M00/03/6C/rAoKmV4AZ3GAK-xpAABsQm0qZyQ219.jpg" alt="" />
-                                                </div>
-                                                <h3>2020第七届城市戏剧节 《涂红》-石家庄站</h3>
-                                            </a>
-                                        </div>
-                                        <div className="swiper-slide" id={style.swiper_slide_active}>
-                                            <a href="">
-                                                <div className={style.hot_list_item}>
-                                                    <img src="https://image.juooo.com//group1/M00/03/6C/rAoKmV4AZ3GAK-xpAABsQm0qZyQ219.jpg" alt="" />
-                                                </div>
-                                                <h3>2020第七届城市戏剧节 《涂红》-石家庄站</h3>
-                                            </a>
-                                        </div>
-                                        <div className="swiper-slide" id={style.swiper_slide_active}>
-                                            <a href="">
-                                                <div className={style.hot_list_item}>
-                                                    <img src="https://image.juooo.com//group1/M00/03/6C/rAoKmV4AZ3GAK-xpAABsQm0qZyQ219.jpg" alt="" />
-                                                </div>
-                                                <h3>2020第七届城市戏剧节 《涂红》-石家庄站</h3>
-                                            </a>
-                                        </div>
-                                        <div className="swiper-slide" id={style.swiper_slide_active}>
-                                            <a href="">
-                                                <div className={style.hot_list_item}>
-                                                    <img src="https://image.juooo.com//group1/M00/03/6C/rAoKmV4AZ3GAK-xpAABsQm0qZyQ219.jpg" alt="" />
-                                                </div>
-                                                <h3>2020第七届城市戏剧节 《涂红》-石家庄站</h3>
-                                            </a>
-                                        </div>
-                                        <div className="swiper-slide" id={style.swiper_slide_active}>
-                                            <a href="">
-                                                <div className={style.hot_list_item}>
-                                                    <img src="https://image.juooo.com//group1/M00/03/6C/rAoKmV4AZ3GAK-xpAABsQm0qZyQ219.jpg" alt="" />
-                                                </div>
-                                                <h3>2020第七届城市戏剧节 《涂红》-石家庄站</h3>
-                                            </a>
-                                        </div>
+                                            ))
+                                        }
                                     </div>
                                 </div>
                             </div>
@@ -401,54 +235,22 @@ class Home extends Component {
                     <div className={style.stage_list}>
                         <div className="swiper-container swiper3">
                             <div className="swiper-wrapper">
-                                <div className="swiper-slide" id={style.stage_list_swiper_active}>
-                                    <a href="">
-                                        <div className={style.stage_list_swiper_pic}>
-                                            <img src="https://image.juooo.com//group1/M00/03/40/rAoKmV3LdBWAImHFAACB1n-G-Nk921.jpg" alt="" />
+                                {
+                                    this.props.postponeShowList.slice(1).map((v) => (
+                                        <div key={v.sche_id} className="swiper-slide" id={style.stage_list_swiper_active}>
+                                            <a href="">
+                                                <div className={style.stage_list_swiper_pic}>
+                                                    <img src={v.pic} alt="" />
+                                                </div>
+                                                <h3>{v.schedular_name}</h3>
+                                                <p>
+                                                    <strong>¥{v.low_price}</strong>
+                                                    <span>起</span>
+                                                </p>
+                                            </a>
                                         </div>
-                                        <h3>【演出延期】2020第七届城市戏剧节 乌镇戏剧节“最佳戏剧奖”“最佳个人表现奖”团队最新作品《涂红》-深圳站</h3>
-                                        <p>
-                                            <strong>¥99</strong>
-                                            <span>起</span>
-                                        </p>
-                                    </a>
-                                </div>
-                                <div className="swiper-slide" id={style.stage_list_swiper_active}>
-                                    <a href="">
-                                        <div className={style.stage_list_swiper_pic}>
-                                            <img src="https://image.juooo.com//group1/M00/03/40/rAoKmV3LdBWAImHFAACB1n-G-Nk921.jpg" alt="" />
-                                        </div>
-                                        <h3>【演出延期】2020第七届城市戏剧节 乌镇戏剧节“最佳戏剧奖”“最佳个人表现奖”团队最新作品《涂红》-深圳站</h3>
-                                        <p>
-                                            <strong>¥99</strong>
-                                            <span>起</span>
-                                        </p>
-                                    </a>
-                                </div>
-                                <div className="swiper-slide" id={style.stage_list_swiper_active}>
-                                    <a href="">
-                                        <div className={style.stage_list_swiper_pic}>
-                                            <img src="https://image.juooo.com//group1/M00/03/40/rAoKmV3LdBWAImHFAACB1n-G-Nk921.jpg" alt="" />
-                                        </div>
-                                        <h3>【演出延期】2020第七届城市戏剧节 乌镇戏剧节“最佳戏剧奖”“最佳个人表现奖”团队最新作品《涂红》-深圳站</h3>
-                                        <p>
-                                            <strong>¥99</strong>
-                                            <span>起</span>
-                                        </p>
-                                    </a>
-                                </div>
-                                <div className="swiper-slide" id={style.stage_list_swiper_active}>
-                                    <a href="">
-                                        <div className={style.stage_list_swiper_pic}>
-                                            <img src="https://image.juooo.com//group1/M00/03/40/rAoKmV3LdBWAImHFAACB1n-G-Nk921.jpg" alt="" />
-                                        </div>
-                                        <h3>【演出延期】2020第七届城市戏剧节 乌镇戏剧节“最佳戏剧奖”“最佳个人表现奖”团队最新作品《涂红》-深圳站</h3>
-                                        <p>
-                                            <strong>¥99</strong>
-                                            <span>起</span>
-                                        </p>
-                                    </a>
-                                </div>
+                                    ))
+                                }
                             </div>
                         </div>
                     </div>
@@ -557,53 +359,49 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        new Swiper('.swiper', {
-            autoplay: true,
-            direction: 'horizontal',//竖向轮播
-            loop: true,//无缝轮播
-            pagination: {//小圆点分页
-                el: '#swiper',
-            }
-        })
-        new Swiper('.swiper1', {
-            autoplay: true,
-            direction: 'horizontal',//竖向轮播
-            loop: true,//无缝轮播
-            pagination: {//小圆点分页
-                el: '#swiper1',
-            }
-        })
-        new Swiper('.swiper2', {
-            slidesPerView: 3,
-            spaceBetween: 0
-        })
-        new Swiper('.swiper3', {
-            slidesPerView: 3,
-            spaceBetween: 0
-        })
+        setTimeout(() => {
+            new Swiper('.swiper', {
+                autoplay: true,
+                direction: 'horizontal',//竖向轮播
+                loop: true,//无缝轮播
+                pagination: {//小圆点分页
+                    el: '#swiper',
+                }
+            })
+            new Swiper('.swiper1', {
+                autoplay: true,
+                direction: 'horizontal',//竖向轮播
+                loop: true,//无缝轮播
+                pagination: {//小圆点分页
+                    el: '#swiper1',
+                }
+            })
+            new Swiper('.swiper2', {
+                slidesPerView: 3,
+                spaceBetween: 0
+            })
+            new Swiper('.swiper3', {
+                slidesPerView: 3,
+                spaceBetween: 0
+            })
+        }, 3000)
         this.props.homeActions.getLabelItem();
         this.props.homeActions.setFalls();
+        this.props.homeActions.getVipHomeSchedular();
+        this.props.homeActions.getHomeBanner();
+        this.props.homeActions.getHotsShowList();
+        this.props.homeActions.getPostponeShow();
         this.FallsList();
-        const that = this;
-        let page = 1;
-        let clearTime = null;
-        // window.onscroll = function () {
-        //     const minHeight = that.home.offsetHeight - document.documentElement.scrollTop
-        //     if (minHeight < 600) {
-        //         clearTimeout(clearTime)
-        //         console.log(minHeight)
-        //         page += 1;
-        //         clearTime = setTimeout(() => {
-        //             that.FallsList(page);
-        //         },500)
-        //     }
-        // }
     }
 }
 function mapStateToProps(state) {
     return {
         labelItemList: state.home.labelItemList,
-        fallList: state.home.fallList
+        fallList: state.home.fallList,
+        vipHomeSchedular: state.home.vipHomeSchedular,
+        homeBannerList: state.home.homeBannerList,
+        hostShowList: state.home.hostShowList,
+        postponeShowList:state.home.postponeShowList
     }
 }
 function mapDispatchToProps(dispatch) {

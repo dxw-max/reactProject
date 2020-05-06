@@ -1,4 +1,8 @@
 export default {
     labelItemList:[],
-    fallList:[]
+    fallList:[],
+    vipHomeSchedular:[],
+    homeBannerList:[],
+    hostShowList:[],
+    postponeShowList:[],
 }
