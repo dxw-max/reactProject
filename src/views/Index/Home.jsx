@@ -359,6 +359,7 @@ class Home extends Component {
     }
 
     componentDidMount() {
+        document.title = '聚橙网-票务网_演唱会门票_演出订票平台_演出资讯_订票热线400-185-8666';
         setTimeout(() => {
             new Swiper('.swiper', {
                 autoplay: true,

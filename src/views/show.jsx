@@ -60,7 +60,7 @@ class show extends Component {
                 <div id={style.recommend}>
                     <div className={style.show_list}>
                         <div id={style.templatesWrap} className="clearfix" ref={(e) => { this.falls = e }}>
-                            <div className="leftColumn">
+                            <div className={style.leftColumn}>
                                 <ul ref={(e) => { this.leftColumn = e }}>
                                     {
                                         this.state.leftColumn.map((item, index) => {
@@ -95,7 +95,7 @@ class show extends Component {
                                     }
                                 </ul>
                             </div>
-                            <div className="rightColumn">
+                            <div className={style.rightColumn}>
                                 <ul ref={(e) => { this.rightColumn = e }}>
                                     {
                                         this.state.rightColumn.map((item, index) => {

@@ -2,6 +2,11 @@
     margin: 0px;
     padding: 0px;
 }
+
+.leftColumn,.rightColumn{
+    margin-top: 2rem;
+}
+
 body {
   
     height: 1624px;

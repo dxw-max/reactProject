@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import style from '../assets/style/Detail/Detail.module.css'
 
 export default class Detail extends Component {
+    componentDidMount(){
+        document.title = '【演出变更】林子祥开心演唱会-新加坡站';
+    }
     render() {
         return (
             <div className={style.home}>
