@@ -27,7 +27,7 @@ nav a{
     display: block;
     color: #232323;
     text-decoration: none;
-    padding-top: 0.1rem;  
+    /* padding-top: 0.1rem;   */
 }
 
 nav a span{
