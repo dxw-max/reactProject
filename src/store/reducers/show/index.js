@@ -10,5 +10,8 @@ export default function(state=showInit,{type,payload}){
     if(type===showActionType.UP_SHOW){
         state.showList = payload
     }
+    if(type===showActionType.UP_CITY_LIST){
+        state.cityList = payload
+    }
     return state
 }

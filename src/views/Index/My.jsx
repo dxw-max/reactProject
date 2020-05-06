@@ -72,7 +72,9 @@ class My extends Component {
                             </div>
                         </li>
                         <li>
-                            <div>
+                            <div onClick={()=>{
+                                this.props.history.push("/Wallet")
+                            }}>
                                 <svg className={style.icon} aria-hidden="true" >
                                     <use xlinkHref="#iconyouhui-copy"></use>
                                 </svg>

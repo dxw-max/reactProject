@@ -6,6 +6,9 @@ import { connect } from "react-redux"
 import { bindActionCreators } from "redux"
 import showTypeCreator from "../store/actionCreator/show/index"
 import axios from "axios"
+import 'antd/dist/antd.css';
+import { Drawer, Button } from 'antd';
+
 
 class show extends Component {
     constructor(props) {
@@ -13,9 +16,23 @@ class show extends Component {
         this.state = {
             leftColumn: [],
             rightColumn: [],
-            page: 1
+            page: 1,
+            visible: false,
+            city: "全国"
         }
     }
+    showDrawer = () => {
+        this.setState({
+            visible: true,
+        });
+    };
+
+    onClose = () => {
+        this.setState({
+            visible: false,
+        });
+    };
+
     render() {
         return (
             <div className={style.box}>
@@ -33,27 +50,63 @@ class show extends Component {
                 <div className={style.nav}>
                     <div className="swiper-container swiper_show">
                         <div className="swiper-wrapper">
-                           <ul className={style.showType}>
+                            <ul className={style.showType}>
                                 {
                                     this.props.showTypeList.map(v => (
-                                     
+
                                         <li key={v.id}>
                                             <span>{v.name}</span>
                                         </li>
-                                   
+
                                     ))
                                 }
-                           </ul>
+                            </ul>
 
-                               
-                          
+
+
                         </div>
                     </div>
                     <div className={style.city_wrap}>
-                        <p>全国</p>
+                        <div className={style.name} onClick={this.showDrawer}>
+                            {this.state.city}
+                        </div>
                         <svg className={style.icon} aria-hidden="true" >
                             <use xlinkHref="#iconshouhuodizhi"></use>
                         </svg>
+                        <div >
+                            <Drawer
+                                title="城市"
+                                placement="right"
+                                closable={false}
+                                onClose={this.onClose}
+                                visible={this.state.visible}
+                                width="294px"
+                                footer={
+                                    <div style={{ width: "290px", height: "50px", float: "left" }}>
+                                        <div style={{ width: "145px", height: "50px", background: "#ffffff", float: "left", textAlign: "center", lineHeight: "50px", fontSize: "18px" }}>重置</div>
+                                        <div style={{ width: "145px", height: "50px", background: "#ff6743", float: "left", textAlign: "center", lineHeight: "50px", fontSize: "18px" }}>完成</div>
+                                    </div>
+
+                                }
+
+                            >
+                                <ul>
+                                    <li>全国</li>
+                                    {
+                                        this.props.cityList.map(v => (
+                                            <div key={v.id}>
+                                                <li onClick={this.active.bind(this)}>{v.name}</li>
+                                            </div>
+                                        ))
+                                    }
+                                </ul>
+
+                            </Drawer>
+                            <div>
+                                <div>重置</div>
+                                <div>完成</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -139,7 +192,13 @@ class show extends Component {
             </div>
         )
     }
-
+    active(e){
+        if(e.target){
+            e.target.style.color="#ff6743"
+        }else{
+           
+        }
+    }
 
     async FallsList() {
         const { data } = await axios.get("/jc/Show/Search/getShowList", {
@@ -175,7 +234,6 @@ class show extends Component {
             ],
             page: this.state.page + 1,
         });
-        console.log(this.state.page)
     }
 
     async componentDidMount() {
@@ -184,10 +242,11 @@ class show extends Component {
             freeModeMomentum: false,
         })
         this.props.showTypeCreator.getShowType();
-        this.props.showTypeCreator.getShow()
+        this.props.showTypeCreator.getShow();
+        this.props.showTypeCreator.getCity();
         this.FallsList();
-        console.log(this.falls.offsetHeight)
-        console.log(this.state)
+        // console.log(this.falls.offsetHeight)
+        // console.log(this.state)
 
     }
 
@@ -196,7 +255,8 @@ function mapStateToProps(state) {
     //console.log(22,state.show.showList)
     return {
         showTypeList: state.show.showTypeList,
-        showList: state.show.showList
+        showList: state.show.showList,
+        cityList: state.show.cityList
     }
 
 }

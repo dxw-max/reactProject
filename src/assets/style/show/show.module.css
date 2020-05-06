@@ -26,8 +26,10 @@ body {
     height: 87.96px;
     border-bottom: 2px solid #ebebeb;
     position: fixed;
+    top: 0px;
     z-index: 100;
     background: #ffffff;
+    overflow: hidden;
 }
 .header span{
     width: 100px;
@@ -46,6 +48,7 @@ body {
     margin-top: 20px;
 }
 
+
 .nav{
     background: #ffffff;
     width: 750px;
@@ -61,6 +64,7 @@ body {
    height: 50px;
    display: flex;
    flex-direction: row;
+   background:#ffffff;
    
 }
 .nav .showType li{
@@ -74,21 +78,58 @@ body {
 }
 .nav .city_wrap{
     position: absolute;
+    top:10px;
     right: 0;
     z-index: 100;
     width: 152px;
     height: 50px;
-    background: #ffffff;
+    background:#ffffff;
     overflow: hidden;
     border-left: 2px solid #ebebeb;
 }
-.nav .city_wrap p{
+.nav .city_wrap .name{
     float: left;
     height: 50px;
     line-height: 50px;
     text-align: center;
     padding-left: 30px;
 }
+[data-theme='compact'] .ant-drawer-body p {
+    margin-bottom: 0px;
+  }
+  :global(.ant-drawer-header .ant-drawer-title){
+      font-size: 40px;
+      margin-top: 10px;
+  }
+:global(.ant-drawer-body ul){
+    width: 600px;
+    float: left;
+    height: 1020px;
+    overflow: auto;
+}
+:global(.ant-drawer-body ul li){
+    width: 160px;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    margin: 10px;
+    float: left;
+    background: #f5f5f5;
+    font-size: 24px;
+}
+:global(.ant-drawer-body ul .active){
+    /* width: 160px;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    margin: 10px;
+    float: left; */
+    background: #fff1e9;
+    color: #ff6743;
+    font-size: 24px;
+}
+
+
 #recommend{
 
 }
@@ -99,6 +140,7 @@ body {
     padding: 0 0.4rem;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    margin-top: 100px;
 }
 
 #recommend .show_list #templatesWrap{

@@ -13,6 +13,12 @@ export function changeShow(payload){
         payload
     }
 }
+export function changeCity(payload){
+    return {
+        type:showActionType.UP_CITY_LIST,
+        payload
+    }
+}
 
 export default{
     getShowType(){
@@ -28,6 +34,13 @@ export default{
             const {data} = await axios.get("/jc/Show/Search/getShowList");
             dispatch(changeShow(data.data.list))
             //console.log(data.data.list)
+        }
+    },
+    getCity(){
+        return async(dispatch)=>{
+            const {data} = await axios.get("/jc/city/city/getCityList");
+            dispatch(changeCity(data.data.city_list))
+            //console.log(data.data.city_list)
         }
     }
 }
