@@ -18,7 +18,7 @@
     "reactjs-swiper": "^0.1.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
-    "swiper": "^5.3.8"
+    "swiper": "^6.5.1"
   },
   "scripts": {
     "start": "react-scripts start",
